@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#">Online Food Order - Kitchen Staff</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" id="sign-in-link" href="#">Sign In</a>
+        </li>
+        <li class="nav-item" style="display: none;" id="sign-out-li">
+          <a class="nav-link" id="sign-out-link" href="#">Sign Out</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <h1>Online Food Order - Kitchen Staff</h1>
+  
+  <div id="order-list" class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Order Name</th>
+          <!-- <th>Customer Name</th> -->
+          <!-- <th>Restaurant Name</th> -->
+          <th>Price</th>
+          <th>Status</th>
+          <th>Quantity</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td>{{ order.orderid }}</td>
+          <td>{{ order.prodname }}</td>
+          <!-- <td>{{ order.username }}</td> -->
+          <!-- <td>{{ order.restName }}</td> -->
+          <td>{{ order.price }}</td>
+          <td>{{ order.status }}</td>
+          <td>{{ order.quantity }}</td>
+          <td>
+            <button class="btn btn-primary"
+            (click)="changeStatus(order)"
+            [disabled]="order.status === 'ready'"
+            [style.cursor]="order.status === 'ready' ? 'not-allowed' : 'pointer'">
+      {{ order.status === 'ready' ? 'Completed' : 'Change Status' }}
+    </button>
+            <!-- <button class="btn btn-primary" (click)="changeStatus(order)">Change Status</button> -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+  </div>
+  

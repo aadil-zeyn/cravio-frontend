@@ -1,0 +1,48 @@
+<!-- <div class="container">
+    <button class="go-back-button" (click)="goBack()">Go Back</button>
+      <h1>Menu List</h1>
+      <div class="menu-list">
+        <div *ngFor="let menu of menus" class="menu-card">
+          <img [src]="menu.image" alt="Menu Image" class="menu-image">
+          
+          <h2 class="menu-title">{{ menu.product }}</h2>
+          <p class="menu-price">Price: Rs. {{ menu.price }}</p>
+          <p class="menu-description">{{ menu.description }}</p>
+          <p class="menu-restaurant">Restaurant: {{ menu.restname }}</p>
+          <button id="button" (click)="addToCart(menu)">Add To Cart</button> 
+        </div>
+        
+      </div>
+      <button id="button" (click)="checkout()">Proceed to checkout</button>
+    </div>
+     -->
+
+     <div class="container">
+      <button class="go-back-button" (click)="goBack()">Go Back</button>
+        <div class="container" *ngIf="cartItems.length > 0; else emptyCart">
+          <div *ngFor="let cartItem of cartItems" class="cart-item">
+            <div class="cart-item-details">
+              <h2>{{ cartItem.prodname }}</h2>
+              <p>Restaurant: {{ cartItem.restName }}</p>
+              <p>Price: Rs. {{ cartItem.price*cartItem.quantity }}</p>
+              <p>Quantity: {{ cartItem.quantity }}</p>
+              <p>Status: {{ cartItem.status }}</p>
+            </div>
+            <div class="cart-item-actions">
+              <button (click)="removeFromCart(cartItem)">Remove</button>
+              <button (click)="incrementupdateQuantity(cartItem)" style="background-color: #4caf50;">+</button>
+              <button (click)="decrementupdateQuantity(cartItem)" style="background-color: #af4c4c;">-</button>
+            </div>
+          </div>
+          <div class="cart-total">
+            <p>Total Items: {{ getTotalQuantity() }}</p>
+            <!-- <p>Total Items: {{ cartItems.length }}</p> -->
+            <p>Total Cost: Rs. {{ calculateTotalCost() }}</p>
+            <button class="proceed-to-payment-button" (click)="proceedToPayment()">Proceed to Payment</button>
+          </div>
+        </div>
+        <ng-template #emptyCart>
+          <p class="empty-cart-message">Your cart is empty.</p>
+        </ng-template>
+      </div>
+      

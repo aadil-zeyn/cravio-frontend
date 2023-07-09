@@ -1,0 +1,34 @@
+
+<div class="container">
+    <button class="go-back-button" (click)="goBack()">Go Back</button>  
+      <h1>Update Item</h1>
+      <form (submit)="onSubmit()">
+        <div class="form-group">
+          <label for="product">Product Name</label>
+          <input type="text" id="product" name="product" [(ngModel)]="item.product" class="form-control">
+        </div>
+    
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input type="number" id="price" name="price" [(ngModel)]="item.price" class="form-control">
+        </div>
+    
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="description" name="description" [(ngModel)]="item.description" class="form-control"></textarea>
+        </div>
+    
+        <div class="form-group">
+          <label for="image">Image URL</label>
+          <input type="text" id="image" name="image" [(ngModel)]="item.image" class="form-control">
+        </div>
+    
+        <div class="form-group">
+          <label for="restname">Restaurant Name</label>
+          <input type="text" id="restname" name="restname" [(ngModel)]="item.restname" class="form-control">
+        </div>
+    
+        <button class="form-submit" type="submit">Update</button>
+      </form>
+    </div>
+    

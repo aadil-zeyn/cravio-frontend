@@ -1,0 +1,27 @@
+
+   <div class="container">
+    <button id="signout-button" (click)="logoutAdmin()">Sign Out</button>
+       <h1>Admin Dashboard</h1>
+       <h3 class="col-md-4" style="font-family: 'Times New Roman', Times, serif;">Welcome : {{ adminEmail }}</h3>
+       <div class="dashboard-buttons">
+         <a (click)="activeComponent = 'add-restaurant'" [class.active]="activeComponent === 'add-restaurant'" class="dashboard-button">
+           <span class="dashboard-button-icon">&#43;</span>
+           <span>Add Restaurant</span>
+         </a>
+         <a (click)="activeComponent = 'add-menu'" [class.active]="activeComponent === 'add-menu'" class="dashboard-button">
+           <span class="dashboard-button-icon">&#43;</span>
+           <span>Add Menu</span>
+         </a>
+         <a (click)="activeComponent = 'view-restaurants'" [class.active]="activeComponent === 'view-restaurants'" class="dashboard-button">
+           <span class="dashboard-button-icon">&#128065;</span>
+           <span>View Details</span>
+         </a>
+       </div>
+       <a routerLink="/kitchenstaff/register"><button>register kitchenstaff</button></a>
+       <div [ngSwitch]="activeComponent">
+         <app-add-restaurant *ngSwitchCase="'add-restaurant'"></app-add-restaurant>
+         <app-add-menu *ngSwitchCase="'add-menu'"></app-add-menu>
+         <app-view-restaurants *ngSwitchCase="'view-restaurants'"></app-view-restaurants>
+       </div>
+     </div>
+   

@@ -1,0 +1,63 @@
+<!-- <div class="container">
+  <h3 class="col-md-12">Welcome {{ customerName }}</h3>
+  <div class="row">
+    <div class="col-md-2">
+      <button class="btn btn-warning" (click)="logoutCustomer()">
+        Logout
+      </button>
+    </div>
+    <div class="col-md-2">
+      <button class="btn btn-warning" (click)="viewCart()">
+        View Cart
+      </button>
+    </div>
+    <div class="col-md-2">
+      <button class="btn btn-warning" (click)="viewProfile()">
+        View Profile
+      </button>
+    </div>
+    <div class="col-md-2">
+      <button class="btn btn-warning" (click)="orderStatus()">
+        Orders
+      </button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <app-list-restaurant></app-list-restaurant>
+    </div>
+  </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+ <div class="container">
+  <h3 class="col-md-3">Welcome {{ customerName }}</h3>
+  <button class="btn btn-warning col-md-2" (click)="logoutCustomer()">
+    Logout
+  </button>
+  <button class="btn btn-warning col-md-2 offset-md-1" (click)="viewCart()">
+    View Cart
+  </button>
+  <button class="btn btn-warning col-md-2 offset-md-1" (click)="viewProfile()">
+    View Profile
+  </button>
+  <button class="btn btn-warning col-md-2 offset-md-1" (click)="orderStatus()">
+    Orders
+  </button>
+
+  <app-list-restaurant></app-list-restaurant>
+</div> 
+
+<!--   
+  <app-menu-items></app-menu-items>
+  
+  <app-food-items></app-food-items> -->
+   -->

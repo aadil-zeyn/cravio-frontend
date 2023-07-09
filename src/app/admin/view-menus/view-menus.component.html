@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="search-bar-container">
+    <app-search (searchValEvent)="applyFilter($event)"></app-search>
+    <button class="go-back-button" (click)="goBack()">Go Back</button>
+  </div>
+      <h1>Menu List</h1>
+      <div class="menu-list">
+        <div *ngFor="let menu of menus" class="menu-card">
+          <img [src]="menu.image" alt="Menu Image" class="menu-image">
+          
+          <h2 class="menu-title">{{ menu.product }}</h2>
+          <p class="menu-price">Price: Rs. {{ menu.price }}</p>
+          <p class="menu-description">{{ menu.description }}</p>
+          <p class="menu-restaurant">Restaurant: {{ menu.restname }}</p>
+          <!-- <button id="button" routerLink="/update-menu/{{ menu.id }}">Update Menu</button> -->
+          <button id="button" (click)="updateItem(menu.product)">Update Menu</button>
+        </div>
+      </div>
+    </div>
+    

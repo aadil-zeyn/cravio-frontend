@@ -1,0 +1,14 @@
+<div class="container">
+    <h1>Restaurant List</h1>
+    <div class="menu-list">
+      <div *ngFor="let rest of rests" class="menu-card">
+        <img [src]="rest.logoUrl" alt="Restaurant Image" class="menu-image">
+        <h2 class="menu-title">{{ rest.restName }}</h2>
+        <p class="menu-price">{{ rest.cuisine }}</p>
+        <p class="menu-description">{{ rest.location }}</p>
+        <p class="menu-restaurant">{{ rest.phone }}</p>
+        <button id="button" (click)="viewMenu(rest.restName)">See Menu</button>
+      </div>
+    </div>
+  </div>
+  

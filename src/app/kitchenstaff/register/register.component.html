@@ -1,0 +1,36 @@
+<section class="vh-100">
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-9 col-lg-6 col-xl-5">
+          <img src="../../../assets/kitchenstafflogin.jpg" class="img-fluid img-bordered" alt="Sample image">
+        </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+          <h1 class="text-center mb-4">Cravio Kitchen Staff Registration</h1>
+          <form (ngSubmit)="register()">
+            <!-- First Name input -->
+            <div class="form-outline mb-4">
+              <input type="text" id="form3Example1" [(ngModel)]="kitchenstaff.userFirstName" name="firstNameInput" class="form-control form-control-lg" required>
+              <label class="form-label" for="form3Example1">First Name</label>
+            </div>
+  
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+              <input type="email" id="form3Example3" [(ngModel)]="kitchenstaff.userName" name="emailInput" class="form-control form-control-lg" required>
+              <label class="form-label" for="form3Example3">Email Address</label>
+            </div>
+  
+            <!-- Password input -->
+            <div class="form-outline mb-3">
+              <input type="password" id="form3Example4" [(ngModel)]="kitchenstaff.userPassword" name="passwordInput" class="form-control form-control-lg" required>
+              <label class="form-label" for="form3Example4">Password</label>
+            </div>
+  
+            <div class="text-center mt-4 pt-2">
+              <button type="submit" class="btn btn-primary btn-lg">Register</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  

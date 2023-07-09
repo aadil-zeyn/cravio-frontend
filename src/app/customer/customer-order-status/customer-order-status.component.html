@@ -1,0 +1,24 @@
+<h1>Online Food Order - Customer</h1>
+
+<div id="order-list" class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Order ID</th>
+        <th>Order Name</th>
+        <!-- <th>Price</th> -->
+        <th>Status</th>
+        <!-- <th>Quantity</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td>{{ order.orderid }}</td>
+        <td>{{ order.prodname }}</td>
+        <!-- <td>{{ order.price }}</td> -->
+        <td>{{ order.status }}</td>
+        <!-- <td>{{ order.quantity }}</td> -->
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -25,6 +25,7 @@ import { ForbidenComponent } from './forbiden/forbiden.component';
 import { DashboardComponent } from './kitchenstaff/dashboard/dashboard.component';
 import { LoginComponent } from './kitchenstaff/login/login.component';
 import { RegisterComponent } from './kitchenstaff/register/register.component';
+import { AddKitchenStaffComponent } from './admin/add-kitchen-staff/add-kitchen-staff.component';
 
 
 const routes: Routes = [
@@ -38,6 +39,12 @@ const routes: Routes = [
   { path: 'view-restaurants', component: ViewRestaurantsComponent,canActivate:[AuthGuard], data:{roles:['Admin']} },
   { path: 'update-menu/:prodName', component: UpdateMenuComponent,canActivate:[AuthGuard], data:{roles:['Admin']} },
   { path: 'view-menus/:restaurantName', component: ViewMenusComponent ,canActivate:[AuthGuard], data:{roles:['Admin']}},
+  
+  
+  // {path:'admin/home',component:AdminHomeComponent},
+  { path: 'add-kitchen-staff', component: AddKitchenStaffComponent},
+
+
   {path:'customer/login',component:CustomerLoginComponent},
   {path:'customer/home',component:CustomerHomeComponent},
   {path:'customer/register',component:CustomerRegisterComponent},
@@ -49,7 +56,8 @@ const routes: Routes = [
   {path:'kitchenstaff/dashboard',component:DashboardComponent,canActivate:[AuthGuard], data:{roles:['KitchenStaff']}},
   {path:'kitchenstaff/login',component:LoginComponent},
   {path:'kitchenstaff/register',component:RegisterComponent,canActivate:[AuthGuard], data:{roles:['Admin']}},
-  {path:'forbidden',component:ForbidenComponent}
+  {path:'forbidden',component:ForbidenComponent},
+  { path: '**', component: ForbidenComponent }
 
 
 ];

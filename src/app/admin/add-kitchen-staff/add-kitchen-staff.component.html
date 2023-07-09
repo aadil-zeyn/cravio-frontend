@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>Add Kitchen-Staff</h1>
+    <form [formGroup]="kstaffForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="userName" class="form-label">Kitchen-Staff Email:</label>
+            <input type="email" class="form-input" id="userName"   formControlName="userName" placeholder="Enter Kitchen-Staff email" name="userName" required>
+          </div>
+          <div class="form-group">
+            <label for="userPassword" class="form-label">Kitchen-Staff Password:</label>
+            <input type="password" class="form-input" id="userPassword"  formControlName="userPassword" placeholder="Enter Password" name="userPassword" required>
+          </div>
+        <div class="form-group">
+            <label for="restName" class="form-label">Restaurant Name: </label>
+            <select formControlName="restName" name="restName">
+              <option value="">- Select -</option>
+              <option *ngFor="let restaurant of restaurantNames" [value]="restaurant">{{ restaurant }}</option>
+            </select>
+          </div>
+      <button class="form-submit" type="submit">Submit</button>
+    </form>
+  </div>

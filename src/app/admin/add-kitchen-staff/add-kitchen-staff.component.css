@@ -1,0 +1,58 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-label {
+    font-weight: bold;
+  }
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .form-submit {
+    padding: 10px 20px;
+    background-color: #337ab7;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .form-submit:hover {
+    background-color: #286090;
+  }
+
+  /* styles.css */
+
+/* Styling for the select element */
+select {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+}
+
+/* Styling for the option elements */
+option {
+  padding: 8px;
+}
+
+/* Styling for the default option */
+option[value=""] {
+  color: #999;
+}
+
+/* Styling when an option is selected */
+option:checked {
+  background-color: #e6f7ff;
+}

@@ -33,6 +33,7 @@ import { ForbidenComponent } from './forbiden/forbiden.component';
 import { LoginComponent } from './kitchenstaff/login/login.component';
 import { RegisterComponent } from './kitchenstaff/register/register.component';
 import { DashboardComponent } from './kitchenstaff/dashboard/dashboard.component';
+import { AddKitchenStaffComponent } from './admin/add-kitchen-staff/add-kitchen-staff.component';
 
 
 
@@ -67,7 +68,8 @@ import { DashboardComponent } from './kitchenstaff/dashboard/dashboard.component
     ForbidenComponent,
     LoginComponent,
     RegisterComponent,
-    DashboardComponent
+    DashboardComponent,
+    AddKitchenStaffComponent
 
   ],
   imports: [

@@ -8,6 +8,10 @@
            <span class="dashboard-button-icon">&#43;</span>
            <span>Add Restaurant</span>
          </a>
+         <a (click)="activeComponent = 'add-kitchen-staff'" [class.active]="activeComponent === 'add-kitchen-staff'" class="dashboard-button">
+          <span class="dashboard-button-icon">&#43;</span>
+          <span>Add Kitchen-Staff</span>
+        </a>
          <a (click)="activeComponent = 'add-menu'" [class.active]="activeComponent === 'add-menu'" class="dashboard-button">
            <span class="dashboard-button-icon">&#43;</span>
            <span>Add Menu</span>
@@ -17,11 +21,12 @@
            <span>View Details</span>
          </a>
        </div>
-       <a routerLink="/kitchenstaff/register"><button>register kitchenstaff</button></a>
+       <!-- <a routerLink="/kitchenstaff/register"><button>register kitchenstaff</button></a> -->
        <div [ngSwitch]="activeComponent">
          <app-add-restaurant *ngSwitchCase="'add-restaurant'"></app-add-restaurant>
          <app-add-menu *ngSwitchCase="'add-menu'"></app-add-menu>
          <app-view-restaurants *ngSwitchCase="'view-restaurants'"></app-view-restaurants>
+         <app-add-kitchen-staff *ngSwitchCase="'add-kitchen-staff'"></app-add-kitchen-staff>
        </div>
      </div>
    
